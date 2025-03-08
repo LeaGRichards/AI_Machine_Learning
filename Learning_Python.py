@@ -1,6 +1,8 @@
 ########  Learning Python ########
 
-# The article called at the end of a script will be shown (nothing before)
+## Some basic principles
+  # The article called at the end of a script will be shown (nothing before)
+  # When running a segment of code, will assume ALL changes done in whole code even if the change has not ran itself
 
 ## Create a STRING -> can use both double and single quotation marks
   msg = 'hello'
@@ -49,15 +51,55 @@
     # Reports : {'name': 'Nico', 'age': 32}
 
 ## Create a FORLOOP
-  # for i in range(10):
-  # A range : starts from 0 and end 1 number before, in this case 0 to 9
-  # for is the function for forloops
-  # give the name of something, can be a letter or a word (j or monkey)
+  # A range : starts from 0 and end 1 number before, 
+    # Range(10) is from 0 to 9
+  # for -> the function for forloops
+  # then give the name of something, can be a letter or a word (ex : j or monkey)
   # 
 
   for j in range(4):
+    print(j)
+    # Reports : 
+       # 0
+       # 1
+       # 2
+       # 3
+
+## TABULATION in forloops
+  # tab means the code written is about the above forloop 
+  # enumerate function returns a tupple that you can unfold
+  # Will loop the first loop (i) for the values of the second loop (j)
+  # Then create a table with the first loop (1) asociated with the second loop (j)
+
+for i in range(4):
+  for j in range(2):
     print(i, j)
+    # Reports : 
+      # 0 0
+      # 0 1
+      # 1 0
+      # 1 1
+      # 2 0
+      # 2 1
+      # 3 0
+      # 3 1
 
-## Tabulation
-  # tab means the code is about the top forloop; to explain...; enumerate function returns a tupple that you can unfold
+## Forloop variation
 
+for i, li in enumerate(l):
+    print(i, li)
+    # Reports : 
+      # 0 2
+      # 1 3.14
+      # 2 hello
+      # 3 42
+
+## Create a list and associate each value to another value manually
+
+l2 = [2, 3, 4] # List of 3, if unknown then use len() function for length
+len(l2)
+  Reports : 3
+
+a, b, c = l2
+a
+  Reports : 2
