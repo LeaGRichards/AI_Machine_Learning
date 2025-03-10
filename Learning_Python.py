@@ -96,10 +96,16 @@ for i, li in enumerate(l):
 
 ## Create a list and associate each value to another value manually
 
-l2 = [2, 3, 4] # List of 3, if unknown then use len() function for length
-len(l2)
+l2 = [2, 3, 4] # List of 3
+len(l2) # If number of variables is unknown then use len() function
   Reports : 3
 
-a, b, c = l2
+a, b, c = l2 # associate a, b and c to the 3 values of the list l2
 a
   Reports : 2
+
+# Play witht the list
+a, *_ = l2 
+  # a is associated with 2;  3 and 4 are ignore (but technically encompassed in *_
+  # * means the rest of the variables beyond
+_
